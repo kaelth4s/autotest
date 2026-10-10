@@ -1,0 +1,11 @@
+{
+  "author": {
+    "name": "Artem",
+    "login": "kaelth4s",
+    "email": "kaelth4s.dev@gmail.com"
+  },
+  "project": {
+    "name": "task/database"
+  },
+  "idsLimit": 10
+}

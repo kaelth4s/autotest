@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/union_reporting</property>
+
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+
+        <mapping class="ru.kaelth4s.db.model.TestModel"/>
+        <mapping class="ru.kaelth4s.db.model.Project"/>
+        <mapping class="ru.kaelth4s.db.model.Author"/>
+        <mapping class="ru.kaelth4s.db.model.Status"/>
+        <mapping class="ru.kaelth4s.db.model.SessionModel"/>
+    </session-factory>
+</hibernate-configuration>
