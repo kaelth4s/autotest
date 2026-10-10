@@ -1,0 +1,5 @@
+{
+  "uploadTextFileDiskPath": "/random.txt",
+  "changedFileExtension": "jpg",
+  "uploadImageFileResourcePath": "api/files/random.jpg"
+}

@@ -19,3 +19,5 @@ gradle/
 Thumbs.db
 
 .env
+
+test-files/
