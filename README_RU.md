@@ -1,3 +1,5 @@
+**Русский** | [English](README.md)
+
 # API-автотесты jsonplaceholder.typicode.com
 
 ## Описание решения
