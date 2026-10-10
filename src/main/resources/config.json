@@ -1,0 +1,17 @@
+{
+  "defaultWaitDuration": 2,
+  "additionalWaits": {
+    "progressBar": {
+      "timeout": 30,
+      "pollingMillis": 100
+    }
+  },
+  "url": "https://demoqa.com/",
+  "browser": "CHROME",
+  "browserOptions": {
+    "interfaceLanguage": "en",
+    "acceptLanguage": "en",
+    "startMaximized": true,
+    "useIncognito": true
+  }
+}

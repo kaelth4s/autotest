@@ -1,0 +1,39 @@
+{
+  "alertsTestData": {
+    "seeAlertText": "You clicked a button",
+    "confirmBoxAlertText": "Do you confirm action?",
+    "confirmInscriptionText": "You selected Ok",
+    "promptBoxAlertText": "Please enter your name"
+  },
+  "iframeTestData": {
+    "parentFrameText": "Parent frame",
+    "childFrameText": "Child Iframe"
+  },
+  "tablesTestData": {
+    "userRegistrationData": [
+      {
+        "firstName": "Jon",
+        "lastName": "Snow",
+        "email": "knownothing@gmail.com",
+        "age": 30,
+        "salary": 3000,
+        "department": "alpha"
+      },
+      {
+        "firstName": "Buttercup",
+        "lastName": "Cumbersnatch",
+        "email": "BudapestCandygram@mail.ru",
+        "age": 41,
+        "salary": 2000,
+        "department": "beta"
+      }
+    ]
+  },
+  "sliderTestData": {
+    "engineerAge": 21,
+    "error": 2
+  },
+  "datePickerTestData": {
+    "nearestDay": "29-02"
+  }
+}
