@@ -1,0 +1,9 @@
+{
+  "cardsTestData": {
+    "interestsCount": 3,
+    "imageResourcePath": "test-files/BTNHeroBloodElfPrince.jpg"
+  },
+  "timerTestData": {
+    "expectedTimerStart": "00:00:00"
+  }
+}

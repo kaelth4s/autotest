@@ -1,0 +1,33 @@
+{
+  "browserName": "firefox",
+  "isRemote": false,
+  "remoteConnectionUrl": "http://localhost:4444/wd/hub",
+  "isElementHighlightEnabled": true,
+  "driverSettings": {
+    "firefox": {
+      "options": {
+        "intl.accept_languages": "en",
+        "general.useragent.locale": "en",
+        "browser.privatebrowsing.autostart": true
+      }
+    }
+  },
+  "timeouts": {
+    "timeoutImplicit": 0,
+    "timeoutCondition": 15,
+    "timeoutScript": 10,
+    "timeoutPageLoad": 30,
+    "timeoutPollingInterval": 300,
+    "timeoutCommand": 60
+  },
+  "logger": {
+    "language": "en"
+  },
+  "retry": {
+    "number": 2,
+    "pollingInterval": 300
+  },
+  "elementCache": {
+    "isEnabled": false
+  }
+}
