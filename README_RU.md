@@ -1,3 +1,5 @@
+**Русский** | [English](README.md)
+
 # UI-автотесты userinyerface.com
 
 ## Описание решения
