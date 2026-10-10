@@ -1,0 +1,7 @@
+{
+  "test": {
+    "name": "auto_test_",
+    "methodName": "ru.kaelth4s.tests.test.ExamTest.shouldCreateTestWithLogAndScreenshot",
+    "env": "local"
+  }
+}
