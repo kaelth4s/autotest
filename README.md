@@ -1,55 +1,59 @@
-# Автотесты на Java — портфолио решений
+﻿[Русский](README_RU.md) | **English**
 
-Репозиторий-компиляция моих автотестов на **Java**: UI, API и БД, отдельно и в сквозных сценариях.
-Цель — показать, как я проектирую тестовые фреймворки, слои и тестовые данные.
+# Java Autotests — a Portfolio of Solutions
 
-Каждое решение живёт в **отдельной ветке** со своим README, тестами и исходниками. В `main`
-намеренно нет кода — это оглавление репозитория.
+A repository compiling my **Java** autotests: UI, API and DB, standalone and as end-to-end scenarios.
+The goal is to show how I design test frameworks, layers and test data.
 
-Документация в каждой ветке двуязычная: [`README.md`](../../tree/demo/demoqa-ui) — английский
-(основной), `README_RU.md` — русский; в начале каждого файла есть переключатель языка.
+Every solution lives in its **own branch** with its own README, tests and sources. `main`
+deliberately holds no code — it is the repository index.
 
-Автор: **kaelth4s** · Лицензия: [MIT](LICENSE)
+Documentation for every solution is bilingual: [`README.md`](../../tree/demo/demoqa-ui/README.md) — English
+(primary), [`README_RU.md`](../../tree/demo/demoqa-ui/README_RU.md) — Russian; each file starts with a
+language switcher.
 
-## Как устроен репозиторий
+Author: **kaelth4s** · License: [MIT](LICENSE)
 
-| Ветка | Что демонстрирует | Ключевые тесты | Стек |
+## Repository layout
+
+| Branch | What it demonstrates | Key tests | Stack |
 |---|---|---|---|
-| [`demo/demoqa-ui`](../../tree/demo/demoqa-ui) | UI-фреймворк **с нуля**: собственные `BaseElement` / `BaseForm`, фабрика браузеров, синглтон драйвера, кастомные ожидания | `AlertsTest`, `IframeTest`, `TablesTest`, `HandlesTest`, `SliderTest`, `DatePickerTest` | Selenium 4.47, JUnit 5, AssertJ, Jackson, DataFaker, Logback |
-| [`demo/steam-ui`](../../tree/demo/steam-ui) | Page Object + компоненты страниц, чекбокс-фильтры, счётчики результатов, сравнение данных между страницами | `StoreAboutTest`, `TopSellersTest`, `MarketTest` | Selenium 4.47, WebDriverManager, JUnit 5, AssertJ, Jackson |
-| [`demo/userinyerface-ui`](../../tree/demo/userinyerface-ui) | Работа на **Aquality Selenium**: профильный запуск, Element Factory, кастомные чекбоксы, загрузка файла без нативного диалога через JS | `CardsTest`, `CookiesTest`, `HelpFormTest`, `TimerTest` | Aquality Selenium 4.25, Selenium 4.48, JUnit 5, AssertJ, DataFaker |
-| [`demo/jsonplaceholder-api`](../../tree/demo/jsonplaceholder-api) | API-слой: абстрактный `ApiClient`, generic `ApiResponse<T>`, enum-эндпоинты с path-параметрами, негативные сценарии отдельно от позитивных | `ApiTest` — 6 шагов по `/posts` и `/users` | Rest Assured 6.0.1, Aquality (логирование), JUnit 5, AssertJ, Jackson |
-| [`demo/local-db`](../../tree/demo/local-db) | **API + БД**: результат каждого теста пишется в БД через JUnit-extension, CRUD через JPA/Hibernate-репозитории без «сырых» SQL в тестах | `ApiTest`, `DatabaseTest` (копирование и прогон тестов, проверка, откат) | Rest Assured, Hibernate 6.5, MySQL Connector/J, Lombok, java-dotenv, JUnit 5 |
-| [`demo/local-docker-api-db-ui`](../../tree/demo/local-docker-api-db-ui) | **Сквозной UI + API + БД тест** на стенде в Docker: токен по API, авторизация и cookie на UI, сверка таблицы с БД, создание теста с логом и скриншотом | `ExamTest` — 6 шагов задания | Aquality Selenium, Rest Assured, Hibernate + `hibernate-jpamodelgen`, MySQL, Docker Compose |
-| [`demo/yandexdisk-api-ui`](../../tree/demo/yandexdisk-api-ui) | **UI + API на реальном сервисе**: автологин и переиспользование сессии, проверки без перезагрузки страницы, сверка картинки по MD5 | `YandexDiskTest` — 15 шагов | Aquality Selenium, Rest Assured, JUnit 5, AssertJ, java-dotenv |
+| [`demo/demoqa-ui`](../../tree/demo/demoqa-ui) | A UI framework **built from scratch**: custom `BaseElement` / `BaseForm`, browser factory, driver singleton, custom waits | `AlertsTest`, `IframeTest`, `TablesTest`, `HandlesTest`, `SliderTest`, `DatePickerTest` | Selenium 4.47, JUnit 5, AssertJ, Jackson, DataFaker, Logback |
+| [`demo/steam-ui`](../../tree/demo/steam-ui) | Page Object + page components, checkbox filters, result counters, comparing data across pages | `StoreAboutTest`, `TopSellersTest`, `MarketTest` | Selenium 4.47, WebDriverManager, JUnit 5, AssertJ, Jackson |
+| [`demo/userinyerface-ui`](../../tree/demo/userinyerface-ui) | Working with **Aquality Selenium**: profile-based runs, Element Factory, custom checkboxes, file upload without the native dialog via JS | `CardsTest`, `CookiesTest`, `HelpFormTest`, `TimerTest` | Aquality Selenium 4.25, Selenium 4.48, JUnit 5, AssertJ, DataFaker |
+| [`demo/jsonplaceholder-api`](../../tree/demo/jsonplaceholder-api) | The API layer: abstract `ApiClient`, generic `ApiResponse<T>`, enum endpoints with path parameters, negative scenarios kept apart from positive ones | `ApiTest` — 6 steps over `/posts` and `/users` | Rest Assured 6.0.1, Aquality (logging), JUnit 5, AssertJ, Jackson |
+| [`demo/local-db`](../../tree/demo/local-db) | **API + DB**: every test result is written to the DB through a JUnit extension, CRUD via JPA/Hibernate repositories with no raw SQL in tests | `ApiTest`, `DatabaseTest` (copying and running tests, verification, cleanup) | Rest Assured, Hibernate 6.5, MySQL Connector/J, Lombok, java-dotenv, JUnit 5 |
+| [`demo/local-docker-api-db-ui`](../../tree/demo/local-docker-api-db-ui) | An **end-to-end UI + API + DB test** against a Dockerized stand: token via API, authentication and cookie on the UI, table checked against the DB, a test created with a log and a screenshot | `ExamTest` — 6 task steps | Aquality Selenium, Rest Assured, Hibernate + `hibernate-jpamodelgen`, MySQL, Docker Compose |
+| [`demo/yandexdisk-api-ui`](../../tree/demo/yandexdisk-api-ui) | **UI + API against a real service**: automatic login and session reuse, assertions without page reloads, image verified by MD5 | `YandexDiskTest` — 15 steps | Aquality Selenium, Rest Assured, JUnit 5, AssertJ, java-dotenv |
 
-Одинаковый для всех веток минимум: **Java 25 (Temurin)**, **Maven 3.9.16**, **JUnit Jupiter 6.1.3**,
-**AssertJ 3.27.7**, **Jackson Databind 2.22.2**, **DataFaker 2.7.0**, логирование Log4j2 / Logback,
-сборка Apache Maven, разработка под Windows 10/11.
+The baseline shared by all branches: **Java 25 (Temurin)**, **Maven 3.9.16**, **JUnit Jupiter 6.1.3**,
+**AssertJ 3.27.7**, **Jackson Databind 2.22.2**, **DataFaker 2.7.0**, Log4j2 / Logback logging,
+Apache Maven build, development on Windows 10/11.
 
-## Общие инженерные приёмы
+## Engineering practices
 
-- **Page Object / Page Component + Form** — страницы, формы и повторяющиеся блоки вынесены в отдельные
-  классы, локаторы — в `private static final By`, а не в тестах.
-- **Слоистость** — тест вызывает доменные методы клиентов и репозиториев и не знает про HTTP-методы,
-  HQL и локаторы; негативные сценарии отделены от позитивных.
-- **Конфигурация и данные — в JSON, а не в коде** — `config.json`, `environment.json`, `test-data.json`
-  маппятся в record-DTO через Jackson; секреты и доступы — в `.env` (шаблон `.env.example` в репозитории).
-- **Абстракции вместо дублирования** — базовые `BaseElement` / `BaseForm` / `BasePage` / `BaseTest`,
-  абстрактный `Repository<T, ID>` с транзакцией и rollback, generic `ApiResponse<T>`.
-- **Типобезопасные литералы** — enum'ы вместо строк на месте вызова: `Attribute`, `Endpoint`,
-  `CookieName`, `TestStatus`, `SortType`, `JsScript` и др.
-- **Явные ожидания** вместо `sleep` — кастомные ожидания из конфига, поллинг асинхронных API,
-  ожидание «UI догнал изменение, сделанное по API».
-- **Генерируемые тестовые данные** — `RandomUtil` / `@RandomGenerated` на DataFaker, файлы прогонов в
-  `.gitignore`, чтобы тесты не зависели от состояния стенда.
-- **Синглтоны там, где нужен один ресурс** — `DriverManager`, `ConfigManager`, `SessionFactory`.
-- **Логи и артефакты** — единая точка логирования (Aquality / Log4j2), `logs/test.log`,
-  скриншоты и вложения в БД в сквозном тесте.
+- **Page Object / Page Component + Form** — pages, forms and repeated blocks are extracted into separate
+  classes, locators live in `private static final By`, not in the tests.
+- **Layering** — a test calls domain methods of clients and repositories and knows nothing about HTTP
+  methods, HQL or locators; negative scenarios are separated from positive ones.
+- **Configuration and data in JSON, not in code** — `config.json`, `environment.json`, `test-data.json`
+  are mapped to record DTOs via Jackson; secrets and credentials live in `.env` (an `.env.example`
+  template is committed).
+- **Abstractions instead of duplication** — base `BaseElement` / `BaseForm` / `BasePage` / `BaseTest`,
+  an abstract `Repository<T, ID>` with transaction and rollback, a generic `ApiResponse<T>`.
+- **Type-safe literals** — enums instead of inline strings: `Attribute`, `Endpoint`, `CookieName`,
+  `TestStatus`, `SortType`, `JsScript` and others.
+- **Explicit waits** instead of `sleep` — custom waits configured per project, polling of asynchronous
+  APIs, and waiting for "the UI has caught up with a change made through the API".
+- **Generated test data** — `RandomUtil` / `@RandomGenerated` on top of DataFaker, run artifacts kept in
+  `.gitignore`, so tests do not depend on the state of the stand.
+- **Singletons where a single resource is required** — `DriverManager`, `ConfigManager`, `SessionFactory`.
+- **Logs and artifacts** — a single logging entry point (Aquality / Log4j2), `logs/test.log`, plus
+  screenshots and attachments in the DB for the end-to-end test.
 
-## Быстрый старт
+## Quick start
 
-1. Установите **Java 25 (Eclipse Temurin)** и **Maven 3.9.16**, перезапустите терминал:
+1. Install **Java 25 (Eclipse Temurin)** and **Maven 3.9.16**, then restart the terminal:
 
    ```bat
    winget install --id EclipseAdoptium.Temurin.25.JDK --source winget --accept-package-agreements
@@ -57,7 +61,7 @@
    mvn -version
    ```
 
-2. Переключитесь на нужную ветку и запустите тесты из корня проекта:
+2. Switch to the branch you need and run the tests from the project root:
 
    ```bat
    git clone https://github.com/kaelth4s/autotest.git
@@ -66,28 +70,29 @@
    mvn clean test
    ```
 
-3. Отдельный тест или профиль браузера (там, где поддерживается профильный запуск):
+3. Run a single test or pick a browser profile (where profile-based runs are supported):
 
    ```bat
    mvn test -Dtest=AlertsTest
    mvn clean test -Dprofile=firefox
    ```
 
-### Особенности запуска по веткам
+### Per-branch notes
 
-- **`demo/demoqa-ui`, `demo/steam-ui`** — нужен только браузер (Chrome по умолчанию, Firefox меняется
-  в конфиге); драйверы скачиваются автоматически.
-- **`demo/userinyerface-ui`, `demo/local-docker-api-db-ui`, `demo/yandexdisk-api-ui`** — запуск
-  профилем: `mvn clean test -Dprofile=chrome` (или `firefox`).
-- **`demo/local-db`** — требуется локальный **MySQL 8.x** и восстановленная из дампа схема
-  `union_reporting`; дамп клонируется отдельно в `db-dump/`, доступы — в `.env`
+- **`demo/demoqa-ui`, `demo/steam-ui`** — only a browser is required (Chrome by default, Firefox can be
+  selected in the config); drivers are downloaded automatically.
+- **`demo/userinyerface-ui`, `demo/local-docker-api-db-ui`, `demo/yandexdisk-api-ui`** — run with a
+  profile: `mvn clean test -Dprofile=chrome` (or `firefox`).
+- **`demo/local-db`** — a local **MySQL 8.x** is required, with the `union_reporting` schema restored from
+  a dump; the dump is cloned separately into `db-dump/`, credentials live in `.env`
   (`git clone https://github.com/tquality-education/db_task_dump.git db-dump`).
-- **`demo/local-docker-api-db-ui`** — требуется **Docker Desktop + Docker Compose**; стенд и БД
-  поднимаются из [docker-kits](https://github.com/tquality-education-exam/docker-kits)
+- **`demo/local-docker-api-db-ui`** — **Docker Desktop + Docker Compose** are required; the stand and the
+  DB are started from [docker-kits](https://github.com/tquality-education-exam/docker-kits)
   (`docker-compose up -d`), UI — `http://localhost:8080/web`, API — `http://localhost:8080/api`,
   MySQL — `localhost:3306`.
-- **`demo/yandexdisk-api-ui`** — нужны `client_id`, логин и пароль Яндекс ID в `.env`; при включённой
-  двухфакторной аутентификации подтвердите вход в открытом окне браузера. Сессия сохраняется в
-  `auth-session/` и переиспользуется следующими прогонами.
+- **`demo/yandexdisk-api-ui`** — `client_id`, a Yandex ID login and password are required in `.env`; if
+  two-factor authentication is enabled, confirm the login in the opened browser window. The session is
+  saved in `auth-session/` and reused by subsequent runs.
 
-Точные шаги, версии библиотек и структура каждого проекта — в README соответствующей ветки.
+Exact steps, library versions and the structure of each project are in the README of the corresponding
+branch.
