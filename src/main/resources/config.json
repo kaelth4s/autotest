@@ -1,0 +1,16 @@
+{
+  "explicitWaitsDuration": 2,
+  "browserName": "chrome",
+  "chromeConfig": {
+    "chromeOptions": {
+      "browserVersion": "latest"
+    },
+    "chromeAdditionalOptions": {
+      "useIncognito": true,
+      "interfaceLanguage": "en",
+      "acceptLanguage": "en",
+      "startMaximized": true
+    }
+  },
+  "url": "https://store.steampowered.com/"
+}

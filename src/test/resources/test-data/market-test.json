@@ -1,0 +1,18 @@
+{
+  "filters": [
+    {
+      "filterName": "Select a game",
+      "filterValue": "Dota 2"
+    },
+    {
+      "filterName": "Hero",
+      "filterValue": "Lifestealer"
+    },
+    {
+      "filterName": "Rarity",
+      "filterValue": "Immortal"
+    }
+  ],
+  "search": "golden",
+  "listingOrder": 1
+}

@@ -1,0 +1,17 @@
+{
+  "filters": [
+    {
+      "filterName": "os",
+      "filterValue": "SteamOS + Linux"
+    },
+    {
+      "filterName": "category3",
+      "filterValue": "LAN Co-op"
+    },
+    {
+      "filterName": "tags",
+      "filterValue": "Action"
+    }
+  ],
+  "gameOrder": 1
+}
